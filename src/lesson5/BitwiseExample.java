@@ -7,5 +7,8 @@ public class BitwiseExample {
         System.out.println(Integer.toBinaryString(i1 & i2));
         System.out.println(Integer.toBinaryString(i1 | i2));
         System.out.println(Integer.toBinaryString(i1 ^ i2));
+        System.out.println(Integer.toBinaryString(~i1));
+        System.out.println(Integer.toBinaryString(~i2));
+
     }
 }
