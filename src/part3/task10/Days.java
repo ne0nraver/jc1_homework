@@ -2,10 +2,10 @@ package part3.task10;
 
 public class Days {
     public static void main(String[] args) {
-        int day = 30;
-        int month = 2;
-        int year = 1800;
-        if (year % 4 == 0 && month == 2 && day == 29){
+        int day = 31;
+        int month = 12;
+        int year = 2000;
+        if ((year % 4 == 0 && month == 2 && day == 29 && year % 100 != 0) || (year % 400 == 0 && month == 2 && day == 29)){
             day = 1;
             month++;
             System.out.println("the next day is " + day + "." + month + "." + year);
@@ -28,7 +28,7 @@ public class Days {
             year++;
             System.out.println("the next day is " + day + "." + month + "." + year);
         }
-        else if (day < 30){
+        else if (day < 30 && month !=2){
             day++;
             System.out.println("the next day is " + day + "." + month + "." + year);
         } else System.out.println("incorrect data");
