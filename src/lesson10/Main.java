@@ -22,5 +22,10 @@ public class Main {
 
         isObject = status instanceof Object;
         System.out.println("is enum obj" + isObject);
+
+
+        Pizza pizza = new Pizza();
+        //pizza.notify();//Inherited
+        System.out.println(pizza.getClass().getName());
     }
 }
