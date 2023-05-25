@@ -1,0 +1,5 @@
+model, color, body-type, year, mileage, engine-type, max-seats, price
+"bmw x6", "black", "suv", "2020", "21543", "gasoline", "7", "212345.99"
+"bmw x5", "white", "suv", "2021", "11243", "gasoline", "5", "92345.99"
+"bmw x1", "red", "suv", "2019", "91541", "gasoline", "5", "52345.99"
+"bmw 525i", "black", "sedan", "2022", "213", "gasoline", "7", "312345.99"
