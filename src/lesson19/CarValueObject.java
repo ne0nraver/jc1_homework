@@ -86,4 +86,18 @@ public class CarValueObject {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "CarValueObject{" +
+                "model='" + model + '\'' +
+                ", color=" + color +
+                ", bodyType=" + bodyType +
+                ", year=" + year +
+                ", mileage=" + mileage +
+                ", engineType='" + engineType + '\'' +
+                ", maxSeats=" + maxSeats +
+                ", price=" + price +
+                '}';
+    }
 }
