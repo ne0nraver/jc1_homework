@@ -1,0 +1,37 @@
+package lesson20;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class FileSaver {
+
+    private ExecutorService executorService;
+    private String userHomeDirectory;
+
+    public FileSaver() {
+        executorService = Executors.newSingleThreadExecutor();
+        userHomeDirectory = System.getProperty("user.home");
+    }
+
+    public void saveToFile(String lines) {
+
+        executorService.execute(() -> {
+
+            try {
+                String fileName = System.currentTimeMillis() + ".tmp";
+                File file = new File(userHomeDirectory + File.separator + fileName);
+                FileWriter fileWriter = null;
+                fileWriter = new FileWriter(file);
+                fileWriter.write(lines);
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            ;
+
+        });
+    }
+}
