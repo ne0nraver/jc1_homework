@@ -8,8 +8,8 @@ import java.util.concurrent.Executors;
 
 public class FileSaver {
 
-    private ExecutorService executorService;
-    private String userHomeDirectory;
+    private final ExecutorService executorService;
+    private final String userHomeDirectory;
 
     public FileSaver() {
         executorService = Executors.newSingleThreadExecutor();
@@ -23,8 +23,7 @@ public class FileSaver {
             try {
                 String fileName = System.currentTimeMillis() + ".tmp";
                 File file = new File(userHomeDirectory + File.separator + fileName);
-                FileWriter fileWriter = null;
-                fileWriter = new FileWriter(file);
+                FileWriter fileWriter = new FileWriter(file);
                 fileWriter.write(lines);
                 fileWriter.close();
             } catch (IOException e) {
