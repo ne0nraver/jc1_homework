@@ -1,13 +1,17 @@
 package part9.task39;
 
-public class Garage <Vehicle> {
-    private Vehicle vehicle;
+import java.util.Scanner;
 
-    public Vehicle getVehicle() {
-        return vehicle;
+public class Garage <T extends Vehicle> {
+    public String name;
+    public String getName() {
+        return name;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
+    public void enterVeh (){
+        System.out.println("Enter car or moto: ");
+        Scanner scanner = new Scanner(System.in);
+        name = scanner.nextLine();
     }
+
 }

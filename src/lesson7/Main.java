@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Automat automat = new Automat();
         while (true) {
-            //Main menu
+            //Task46 menu
             automat.printMainMenu();
             //Select product
             int productNum = automat.readProductNumber();
